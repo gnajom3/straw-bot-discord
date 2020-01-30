@@ -119,4 +119,4 @@ bot.on('message', async msg =>{
   
 })
 
-bot.login(token);
+bot.login('NjcxODU4NDYxMDU4OTI0NTU0.XjJ1hQ.7rO578AmND-ikldHHmE1NIgj1Rc');

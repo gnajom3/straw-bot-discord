@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const ms = require("ms");
-
+const token = 'NjcxODU4NDYxMDU4OTI0NTU0.XjJv9g.wYXMFX1JtA0woAXxDr7w0GAnmv0';
 const bot = new Discord.Client();
 const config = require("./config.json");
 
@@ -88,23 +88,25 @@ bot.on('message', async msg =>{
       const HelpEmbed = new Discord.RichEmbed().setTitle("StrawBot").setDescription("Check your DMs!").setFooter(msg.author.name);
        msg.channel.send(HelpEmbed);
       if(!msg.member.roles.has("671164901691097107"))
-      const HelpDM = new Discord.RichEmbed().setTitle("StrawBot").setDescription("**general:**\nping\nmembers")
+      HelpDM = new Discord.RichEmbed().setTitle("StrawBot").setDescription("**general:**\nping\nmembers")
        msg.author.send(HelpDM);
     break;
     case "kick":
       if(!msg.member.roles.has("671164901691097107")) return msg.channel.send("Invalid permissions!")
-      let member = msg.mentions.members.first()
+      member = msg.mentions.members.first()
       if(!member) return msg.channel.send("Provide a user to kick!")
       if(!member.kickable) return msg.channel.send("I cannot kick that user.")
       await member.kick(`Kicked by ${msg.author} using StrawBot™`).catch(error => message.channel.send(`I cannot kick that user.`));
+      msg.channel.send(`Kicked ${member}`)
       audit();
     break;
     case "ban":
       if(!msg.member.roles.has("671164901691097107")) return msg.channel.send("Invalid permissions!")
-      let member = msg.mentions.members.first()
+      member = msg.mentions.members.first()
       if(!member) return msg.channel.send("Provide a user to ban!")
       if(!member.bannable) return msg.channel.send("I cannot ban that user.")
       await member.ban(`banned by ${msg.author} using StrawBot™`).catch(error => message.channel.send(`I cannot ban that user.`));
+      msg.channel.send(`Banned ${member}!`)
       audit();
     break;
   }
@@ -117,4 +119,4 @@ bot.on('message', async msg =>{
   
 })
 
-bot.login(config.token);
+bot.login(token);

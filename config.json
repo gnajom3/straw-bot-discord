@@ -1,0 +1,5 @@
+{ 
+    "token": "NjcxODU4NDYxMDU4OTI0NTU0.XjDFig.qkGnFp_Jd5VU5MqP_3o67uVGMNg",
+    "prefix": "s!",
+    "moderatorRole": "msg.guild.roles.find('name', 'Moderator|•Moderating').id"
+  }

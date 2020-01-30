@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const ms = require("ms");
-const token = 'NjcxODU4NDYxMDU4OTI0NTU0.XjJv9g.wYXMFX1JtA0woAXxDr7w0GAnmv0';
+const token = 'NjcxODU4NDYxMDU4OTI0NTU0.XjJ1AA.6W8zsC6jJZUQ6DZCF9uax21OEfs';
 const bot = new Discord.Client();
 const config = require("./config.json");
 

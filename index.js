@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const ms = require("ms");
-const token = 'NjcxODU4NDYxMDU4OTI0NTU0.XjJ1hQ.7rO578AmND-ikldHHmE1NIgj1Rc';
+const token = 'NjcxODU4NDYxMDU4OTI0NTU0.XjJ4FA.q2oSRshqwoJWF7c1GDpixQvBcKM';
 const bot = new Discord.Client();
 const config = require("./config.json");
 
@@ -119,4 +119,4 @@ bot.on('message', async msg =>{
   
 })
 
-bot.login('NjcxODU4NDYxMDU4OTI0NTU0.XjJ1hQ.7rO578AmND-ikldHHmE1NIgj1Rc');
+bot.login(token);
